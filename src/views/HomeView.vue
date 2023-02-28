@@ -6,8 +6,8 @@
         <v-row>
           <v-col cols="5">
             <div style="position: relative" class="mt-16">
-              <h1 class="text-grey">Hello!</h1>
-              <h1 class="text-white">I'm Hannah Wagner <br> Web Designer & Developer
+              <h1 class="intro">Hi! I'm Hannah Wagner, </h1>
+              <h1 class="skills">Web Designer & Developer!
               </h1>
 
 
@@ -30,27 +30,32 @@
             </div>
           </v-col>
           <v-col cols="5">
-            <div style="position: relative; z-index: 9999" class="mt-16">
-              <v-img src="bunny.webp" contain max-height="300"></v-img>
+            <div style="position: relative; z-index: 9999" class="mt-12 align-center">
+             <div class="backgr">
+               <div class="imgCircle">
+              <v-img class="firstpic" src="slay.jpg" contain max-height="300"></v-img>
+               </div>
+             </div>
             </div>
           </v-col>
         </v-row>
       </div>
+
+
       <v-col cols="12" class="mt-16" id="about">
         <div>
           <v-row>
-            <v-col cols="12" sm="6">
+            <v-col cols="12" sm="6" class="mt-10">
               <div class="egg">
-                <v-img src="bunny2.webp" max-height="300" class=""></v-img>
+                <v-img src="seggsy.png" max-height="300" class=""></v-img>
               </div>
             </v-col>
-            <v-col cols="12" sm="6">
-              <h5 class="mt-16 mb-6">About Me</h5>
+            <v-col cols="12" sm="6" class="mt-3">
+              <h2 class="mt-16 mb-6">About Me</h2>
               <div style="width: 120px">
-
               </div>
-              <h4 class="mt-n4">I Am a Creative Web Designer</h4>
-              <h4 class="">And Developer</h4>
+              <h4 class="mt-n4">I'm so slay pls hire me</h4>
+
               <p class="text-grey">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Aspernatur, ullam perspiciatis fugiat temporibus laboriosam
@@ -204,7 +209,16 @@ export default defineComponent({
           img: "todo2.png",
         },
         {
-          img: "i8.jpg",
+          img: "kindcosmetics.png",
+        },
+        {
+          img: "gdds.png",
+        },
+        {
+          img: "frostbite.png",
+        },
+        {
+          img: "snake.png",
         },
       ],
     };
@@ -220,9 +234,51 @@ export default defineComponent({
   padding: 16px 0 16px 0;
 }
 
+.intro{
+  margin-left: 11%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 2rem;
+}
+
+.skills{
+  margin-left: 11%;
+  margin-right: 0px;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 4rem;
+}
+
+.backgr{
+  background-color: #315A39;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.imgCircle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.firstpic {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 .head {
   position: relative;
-  text-align: center;
   padding: 12px;
   margin-bottom: 6px;
   height: 400px;
@@ -234,7 +290,7 @@ export default defineComponent({
   position: absolute;
   top: 0;
   left: 0;
-  height: 110%;
+  height: 130%;
   width: 50%;
   background: black;
 
@@ -244,19 +300,20 @@ export default defineComponent({
   position: absolute;
   top: 0;
   right: 0;
-  height: 110%;
+  height: 130%;
   width: 50%;
-  background: black;
-
+  background: #B1DD9E;
 }
+
+
 .egg {
   display: block;
   margin-left: 100px;
   margin-top: 50px;
   width: 356px;
   height: 300px;
-  background-color: #fbdf7e;
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  background-color: #B1DD9E;
+  border-radius: 50% 50% 50% 50% / 60% 60% 50% 50%;
 }
 .first {
   width: 100%;
@@ -264,7 +321,6 @@ export default defineComponent({
   text-align: center;
   padding: 2rem 2rem;
 }
-
 
 .child {
   display: inline-block;
@@ -299,13 +355,6 @@ width: 100%;
   text-align: center;
   padding: 0 200px;
   background-color: #f5f5f5;
-}
-.hire {
-  width: 100%;
-  height: 200px;
-  padding: 0 200px;
-  background-color: #e9e9e9;
-  margin-top: -24px;
 }
 
 </style>
