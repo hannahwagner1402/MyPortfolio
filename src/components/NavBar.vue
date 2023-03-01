@@ -8,7 +8,7 @@
       <v-spacer></v-spacer>
       <v-btn text @click="scroll('home')" class="colorText">Home</v-btn>
       <v-btn text @click="scroll('about')"  >About</v-btn>
-      <v-btn text @click="scroll('skills')"  >Skills</v-btn>
+      <v-btn text @click="scroll('skillsset')"  >Skills</v-btn>
       <v-btn text @click="scroll('projects')" > Projects</v-btn>
       <v-btn text @click="scroll('contact')"  > Contact</v-btn>
     </v-app-bar>

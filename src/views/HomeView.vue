@@ -9,6 +9,7 @@
               <h1 class="intro">Hi! I'm Hannah Wagner, </h1>
               <h1 class="skills">Web Designer & Developer!
               </h1>
+              <h4 class ="facts"> Ambitious Creative Computing Student at the UAS St. Pölten based in Vienna Austria :)</h4>
 
 
             </div>
@@ -56,30 +57,49 @@
               </div>
               <h4 class="mt-n4">I'm so slay pls hire me</h4>
 
-              <p class="text-grey">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Aspernatur, ullam perspiciatis fugiat temporibus laboriosam
-                accusamus tempora repellendus sequi sed cum dolorum vero est.
-                Placeat dicta architecto reiciendis est veniam. Unde.
+              <p class="text-grey mt-3">
+                My name is Hannah, and I am a student currently
+                pursuing web design and development. During my time studying,
+                I have acquired a diverse range of skills that enable me to excel
+                in both the coding and design aspects of the field. My coding skills
+                include proficiency in HTML, CSS, Javascript (with experience in Vue.js
+                and Node.js), Kotlin, and basic SQL.
               </p>
               <br />
               <p class="text-grey">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Aspernatur, ullam perspiciatis fugiat temporibus laboriosam
-                accusamus tempora repellendus sequi sed cum dolorum vero est.
-                Placeat dicta architecto reiciendis est veniam. Unde.
+                In terms of design, I am well-versed
+                in Adobe Photoshop, After Effects, Illustrator, and InDesign,
+                Procreate, and Figma. In addition, I have experience in
+                user research and user testing, making me knowledgeable in the field of
+                user experience. Outside of my studies, I enjoy drawing, illustrating, video editing
+                and working on my own projects. I am passionate about expanding my
+                knowledge and skills in coding, designing, and UI/UX, and am eager
+                to learn new things. Thank you for taking the time to learn a little bit
+                about me, and I look forward to the opportunity to work together in the future!
               </p>
             </v-col>
           </v-row>
         </div>
       </v-col>
-      <div class="text-center mt-6">
-        <h2>Skills</h2>
-        <div style="width: 120px; margin: 0 auto">
 
+      <v-col cols="12" class="padd" id="skillsset">
+
+        <div class="text-center mt-16">
+        <h2 class="mySkills">MY SKILLZ 😎</h2>
+        <div style="width: 120px; margin: 0 auto">
         </div>
       </div>
-      <v-col cols="12" class="padd" id="portfolio">
+
+      <div class = "iconContainer">
+        <v-img class="skillIcons" src="js.svg" contain max-height="300"></v-img>
+        <v-img class="skillIcons" src="css3-alt.svg" contain max-height="300"></v-img>
+        <v-img class="skillIcons" src="vuejs.svg" contain max-height="300"></v-img>
+        <v-img class="skillIcons" src="figma.svg" contain max-height="300"></v-img>
+        <v-img class="skillIcons" src="html5.svg" contain max-height="300"></v-img>
+        <v-img class="skillIcons" src="android.svg" contain max-height="300"></v-img>
+        <v-img class="skillIcons" src="node-js.svg" contain max-height="300"></v-img>
+      </div>
+
         <div class="first" id="project">
           <v-row>
             <v-col cols="12">
@@ -127,7 +147,17 @@
           <v-divider></v-divider>
         </div>
       </v-col>
-      <v-col cols="12" sm="12" id="services">
+
+
+
+      <v-col cols="12" sm="12" id="projects">
+
+        <div class="text-center mt-6">
+          <h2 class="mySkills">MY PROJECTS 🤭</h2>
+          <div style="width: 120px; margin: 0 auto">
+          </div>
+        </div>
+
         <div class="d-flex justify-center mb-8 mt-2">
           <v-btn color="#97CF8A" class="mr-2">All</v-btn>
           <v-btn class="mr-2" variant="tonal">Web and App Design</v-btn>
@@ -206,11 +236,12 @@ export default defineComponent({
           img: "2dga.png",
         },
         {
-          img: "todo2.png",
+          img: "omme2.png",
         },
         {
-          img: "kindcosmetics.png",
+          img: "todo2.png",
         },
+
         {
           img: "gdds.png",
         },
@@ -234,6 +265,26 @@ export default defineComponent({
   padding: 16px 0 16px 0;
 }
 
+.mySkills{
+  margin-bottom: 30px;
+  font-family: "Baby Doll";
+  font-size: 50px;
+}
+
+.iconContainer{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 66%;
+  height: 5%;
+}
+.skillIcons{
+  display: flex;
+  width: 100px;
+  height: 100px;
+}
+
 .intro{
   margin-left: 11%;
   display: flex;
@@ -249,6 +300,15 @@ export default defineComponent({
   font-size: 4rem;
 }
 
+.facts{
+  margin-left: 11%;
+  margin-right: 0px;
+  display: flex;
+  justify-content: flex-start;
+  color:darkgrey;
+
+}
+
 .backgr{
   background-color: #315A39;
   display: flex;
@@ -260,7 +320,7 @@ export default defineComponent({
   border-radius: 50%;
 }
 
-.imgCircle{
+.firstpic {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -268,13 +328,6 @@ export default defineComponent({
   height: 300px;
   overflow: hidden;
   border-radius: 50%;
-}
-
-.firstpic {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
 }
 
 .head {
