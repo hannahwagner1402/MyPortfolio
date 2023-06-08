@@ -46,11 +46,11 @@
       <v-col cols="12" class="mt-16" id="about">
         <div>
           <v-row>
-            <v-col cols="12" sm="4" class="mt-16">
+            <v-col cols="12" sm="4" class="mt-13">
               <v-img src="AboutMe.JPG" max-height="400" class="mt-10"></v-img>
             </v-col>
-            <v-col cols="12" sm="4" class="mt-3">
-              <h2 class="mt-16 mb-6">About Me</h2>
+            <v-col cols="12" sm="4" class="mt-5">
+              <h2 class="mt-16 mb-3">About Me</h2>
               <div style="width: 120px"></div>
 
               <p class="text-grey">
@@ -59,7 +59,7 @@
                 In terms of design, I am well-versed in Adobe Photoshop, After Effects, Illustrator, and InDesign, Procreate, and Figma. In addition, I have experience in user research and user testing, making me knowledgeable in the field of user experience. Outside of my studies, I enjoy drawing, illustrating, video editing, and working on my own projects. I am passionate about expanding my knowledge and skills in coding, designing, and UI/UX, and am eager to learn new things. Thank you for taking the time to learn a little bit about me, and I look forward to the opportunity to work together in the future!
               </p>
             </v-col>
-            <v-col cols="12" sm="4" class="mt-16">
+            <v-col cols="12" sm="4" class="mt-13">
               <v-img src="AboutMe2.png" max-height="400" class="mt-10"></v-img>
             </v-col>
           </v-row>
@@ -72,7 +72,7 @@
 
       <v-col cols="12" class="padd" id="skillsset">
 
-        <div class="text-center mt-16">
+        <div class="text-center mt-12">
           <h2 class="mySkills">My Skillset</h2>
           <div style="width: 120px; margin: 0 auto">
           </div>
@@ -155,22 +155,6 @@
       </v-col>
 
 
-      <v-col cols="12" sm="12" id="projects">
-
-        <div class="text-center mt-6">
-          <h2 class="mySkills">MY PROJECTS</h2>
-          <div style="width: 120px; margin: 0 auto">
-          </div>
-        </div>
-
-        <div class="d-flex justify-center mb-8 mt-2">
-          <v-btn color="#97CF8A" class="mr-2">All</v-btn>
-          <v-btn class="mr-2" variant="tonal">Web and App Design</v-btn>
-          <v-btn class="mr-2" variant="tonal">Web and App Development</v-btn>
-          <v-btn class="mr-2" variant="tonal">UI/UX Design</v-btn>
-          <v-btn variant="tonal">Illustration/Animation</v-btn>
-        </div>
-      </v-col>
       <v-col cols="12" class="imgHover mb-12">
         <v-row class="fill-height" align="center" justify="center">
           <template v-for="(item, i) in items" :key="i">
@@ -180,15 +164,18 @@
                     :elevation="isHovering ? 12 : 2"
                     :class="{ 'on-hover': isHovering }"
                     v-bind="props"
+                    @click="openNewPage(item.img)"
+                    style="cursor: pointer"
                 >
-                  <v-img :src="item.img" height="225px" cover> </v-img>
+                  <v-img :src="item.img" height="225px" cover></v-img>
                 </v-card>
               </v-hover>
             </v-col>
           </template>
         </v-row>
       </v-col>
-      <v-col cols="12" sm="12" >
+
+      <v-col cols="12" sm="12">
         <hr class="v-divider">
       </v-col>
 
@@ -210,6 +197,7 @@
     </v-container>
     <FooterView/>
   </v-app>
+
 </template>
 
 <script>
@@ -223,47 +211,77 @@ import FooterView from "../components/FooterView.vue";
 export default defineComponent({
   name: "HomeView",
   setup() {
+    const items = [
+      {
+        img: "kindcosmetics.png",
+      },
+      {
+        img: "clearmind.png",
+      },
+      {
+        img: "easy.png",
+      },
+      {
+        img: "2dga.png",
+      },
+      {
+        img: "omme2.png",
+      },
+      {
+        img: "todo2.png",
+      },
+      {
+        img: "gdds.png",
+      },
+      {
+        img: "frostbite.png",
+      },
+      {
+        img: "snake.png",
+      },
+    ];
+
+    const openNewPage = (imageSrc) => {
+      const newWindow = window.open("", "_blank");
+      newWindow.document.write(`
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Detail Page</title>
+        <style>
+          html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        </style>
+      </head>
+      <body>
+        <img src="${imageSrc}" alt="Full Screen Image">
+      </body>
+    </html>
+  `);
+      newWindow.document.close();
+    };
+
     return {
-
-
-      items: [
-        {
-          img: "kindcosmetics.png",
-        },
-        {
-          img: "clearmind.png",
-        },
-        {
-          img: "easy.png",
-        },
-        {
-          img: "2dga.png",
-        },
-        {
-          img: "omme2.png",
-        },
-        {
-          img: "todo2.png",
-        },
-
-        {
-          img: "gdds.png",
-        },
-        {
-          img: "frostbite.png",
-        },
-        {
-          img: "snake.png",
-        },
-      ],
+      items,
+      openNewPage,
     };
   },
   components: {
     NavBar,
-    FooterView
+    FooterView,
   },
 });
 </script>
+
 <style scoped>
 .v-container {
   padding: 16px 0 16px 0;
@@ -281,12 +299,12 @@ export default defineComponent({
   border-radius: 30%;
 }
 
-
 .dividerMargin{
   margin-top: 35px;
 }
 .mySkills {
   font-size: 45px;
+  margin-bottom: 20px;
 }
 
 .iconContainer {
@@ -294,12 +312,13 @@ export default defineComponent({
   margin-right: auto;
   display: flex;
   flex-wrap: wrap;
-  width:100%;
+  width:45%;
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
   margin-top: 60px;
 }
+
 .skillIconWrapper {
   display: inline-block;
   background-color: #E8E8E8;
@@ -361,7 +380,6 @@ export default defineComponent({
   display: flex;
   justify-content: flex-start;
   color: darkgrey;
-
 }
 
 .backgr {
@@ -416,16 +434,6 @@ export default defineComponent({
   background: #B1DD9E;
 }
 
-
-.egg {
-  display: block;
-  margin-left: 100px;
-  margin-top: 50px;
-  width: 356px;
-  height: 300px;
-  background-color: #B1DD9E;
-  border-radius: 50% 50% 50% 50% / 60% 60% 50% 50%;
-}
 
 .first {
   width: 100%;
