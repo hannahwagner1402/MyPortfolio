@@ -154,7 +154,12 @@
         <v-divider></v-divider>
       </v-col>
 
-
+      <v-col cols="12" sm="12" id="projects">
+        <div class="text-center mt-3">
+          <h2 class="mySkills">MY PROJECTS</h2>
+          <div style="width: 120px; margin: 0 auto"></div>
+        </div>
+      </v-col>
       <v-col cols="12" class="imgHover mb-12">
         <v-row class="fill-height" align="center" justify="center">
           <template v-for="(item, i) in items" :key="i">
