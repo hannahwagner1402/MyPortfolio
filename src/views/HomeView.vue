@@ -47,7 +47,7 @@
         <div>
           <v-row>
             <v-col cols="12" sm="4" class="mt-13">
-              <v-img src="AboutMe.JPG" max-height="400" class="mt-10"></v-img>
+              <v-img src="AboutMe2.png" max-height="400" class="mt-10"></v-img>
             </v-col>
             <v-col cols="12" sm="4" class="mt-5">
               <h2 class="mt-16 mb-3">About Me</h2>
@@ -60,7 +60,7 @@
               </p>
             </v-col>
             <v-col cols="12" sm="4" class="mt-13">
-              <v-img src="AboutMe2.png" max-height="400" class="mt-10"></v-img>
+              <v-img src="AboutMe.jpg" max-height="400" class="mt-10"></v-img>
             </v-col>
           </v-row>
         </div>
